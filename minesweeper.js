@@ -33,7 +33,7 @@ var board = {
 function startGame () {
   for (let i = 0; i < board.cells.length; i++) {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])
-    isMine: (Math.random() >= 0.5)
+   // cells.isMine = (Math.random() >= 0.5);
   }
 
   // Don't remove this function call: it makes the game work!
@@ -47,18 +47,19 @@ function startGame () {
 function checkForWin () {
   var win = true;
   for (let i = 0; i < board.cells.length; i++) {
-    if ((board.cells[i].isMine === true && board.cells[i].isMarked === false) || (board.cells[i].isMine === false && board.cells[i].isMarked === true))  {
+    if ((board.cells[i].isMine === true && board.cells[i].isMarked === false)
+    || (board.cells[i].isMine === false && board.cells[i].isMarked === true))
+    {
     win = false;
-      var randomIndex = Math.floor(Math.random () *cells.length)
-      var randomCell = cells[randomIndex]
     }
-  }
-
+      // var randomIndex = Math.floor(Math.random () *cells.length)
+      // var randomCell = cells[randomIndex]
+    }
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
     if (win == true) {
-      lib.displayMessage('You win!')
-      empty();
+      lib.displayMessage('Congratulations, you won!')
+      // empty();
     }
 }
 
@@ -89,7 +90,12 @@ function countSurroundingMines (cell) {
 // resetBoard();
 
 // var refresh = document.getElementById("reload").onclick = reloadPage;
-
+//Restart Game using 'reloadPage' function
 function reloadPage() {
   window.location.reload();
+}
+
+function sound() {
+  var song = document.getElementById("song");
+  song.play()
 }
