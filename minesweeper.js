@@ -9,12 +9,12 @@ document.addEventListener("contextmenu", checkForWin)
 //Count them & store globally
 
 var board = {
-  cells: [{row: 0, col: 0, isMine: false, isMarked: false, hidden: true}, {row: 0, col: 1, isMine: false, isMarked: false, hidden: true}, {row: 0, col: 2, isMine: true, isMarked: false, hidden: true}, {row: 0, col: 3, isMine: false, isMarked: false, hidden: true}, {row: 0, col: 4, isMine: false, isMarked: false, hidden: true},  {row: 0, col: 5, isMine: false, isMarked: false, hidden: true},
-          {row: 1, col: 0, isMine: true, isMarked: false, hidden: true}, {row: 1, col: 1, isMine: true, isMarked: false, hidden: true}, {row: 1, col: 2, isMine: false, isMarked: false, hidden: true}, {row: 1, col: 3, isMine: false, isMarked: false, hidden: true},  {row: 1, col: 4, isMine: false, isMarked: false, hidden: true},  {row: 1, col: 5, isMine: true, isMarked: false, hidden: true},
-          {row: 2, col: 0, isMine: false, isMarked: false, hidden: true}, {row: 2, col: 1, isMine: false, isMarked: false, hidden: true}, {row: 2, col: 2, isMine: false, isMarked: false, hidden: true}, {row: 2, col: 3, isMine: true, isMarked: false, hidden: true}, {row: 2, col: 4, isMine: true, isMarked: false, hidden: true}, {row: 2, col: 5, isMine: true, isMarked: false, hidden: true},
-          {row: 3, col: 0, isMine: true, isMarked: false, hidden: true}, {row: 3, col: 1, isMine: false, isMarked: false, hidden: true}, {row: 3, col: 2, isMine: true, isMarked: false, hidden: true}, {row: 3, col: 3, isMine: false, isMarked: false, hidden: true}, {row: 3, col: 4, isMine: false, isMarked: false, hidden: true}, {row: 3, col: 5, isMine: false, isMarked: false, hidden: true},
-          {row: 4, col: 0, isMine: true, isMarked: false, hidden: true}, {row: 4, col: 1, isMine: true, isMarked: false, hidden: true}, {row: 4, col: 2, isMine: false, isMarked: false, hidden: true}, {row: 4, col: 3, isMine: false, isMarked: false, hidden: true}, {row: 4, col: 4, isMine: false, isMarked: false, hidden: true}, {row: 4, col: 5, isMine: true, isMarked: false, hidden: true},
-          {row: 5, col: 0, isMine: false, isMarked: false, hidden: true}, {row: 5, col: 1, isMine: false, isMarked: false, hidden: true}, {row: 5, col: 2, isMine: false, isMarked: false, hidden: true}, {row: 5, col: 3, isMine: true, isMarked: false, hidden: true}, {row: 5, col: 4, isMine: true, isMarked: false, hidden: true}, {row: 5, col: 5, isMine: false, isMarked: false, hidden: true},]
+  cells: [{row: 0, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 0, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 0, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 0, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 0, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 0, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},
+          {row: 1, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 1, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 1, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 1, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 1, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 1, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},
+          {row: 2, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 2, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 2, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 2, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 2, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 2, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},
+          {row: 3, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 3, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 3, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 3, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 3, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 3, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},
+          {row: 4, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 4, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 4, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 4, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 4, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 4, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},
+          {row: 5, col: 0, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 5, col: 1, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 5, col: 2, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 5, col: 3, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 5, col: 4, isMine: (Math.random() < 0.4), isMarked: false, hidden: true}, {row: 5, col: 5, isMine: (Math.random() < 0.4), isMarked: false, hidden: true},]
 }
   //Write a 'for' loop to loop through board.cells content
   //Loops to call 'countSurroundingMines' one for each cell in 'board.cells'
@@ -95,7 +95,21 @@ function reloadPage() {
   window.location.reload();
 }
 
-function sound() {
-  var song = document.getElementById("song");
-  song.play()
-}
+// var audio = document.getElementsByTagName("audio")[0];
+// audio.play();
+
+// or with an ID
+
+// var audio = document.getElementById("mySoundClip");
+// audio.play();
+
+// audio.addEventListener("click", (event) => {
+//   var audio = new Audio('audio/sonar.wav');
+//   audio.play();
+// })
+//play audio with from html audio element: 
+// document.getElementById(sonar).play();
+
+//play audio without HTML audio tag
+// var myAudio = new Audio('audio/sonar.wav');
+// myAudio.play();
